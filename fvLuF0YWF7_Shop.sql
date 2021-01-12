@@ -27,11 +27,12 @@ DROP TABLE IF EXISTS `Shop`;
 CREATE TABLE `Shop` (
   `shop_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `shop_address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `shop_manager` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `shop_manager` int(11) NOT NULL,
   `shop_telephone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `shop_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`shop_id`),
-  KEY `idx_fk_shop_manager` (`shop_manager`)
+  KEY `idx_fk_shop_manager` (`shop_manager`),
+  CONSTRAINT `Shop_ibfk_1` FOREIGN KEY (`shop_manager`) REFERENCES `Employee` (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,7 +42,7 @@ CREATE TABLE `Shop` (
 
 LOCK TABLES `Shop` WRITE;
 /*!40000 ALTER TABLE `Shop` DISABLE KEYS */;
-INSERT INTO `Shop` VALUES ('SH001','Narnia','1','04112130887','NarniaBranch@shop.com'),('SH002','Antartica','2','04110875343','AntarticaBranch@shop.com');
+INSERT INTO `Shop` VALUES ('SH001','Narnia',1,'04112130887','NarniaBranch@shop.com'),('SH002','Antartica',2,'04110875343','AntarticaBranch@shop.com');
 /*!40000 ALTER TABLE `Shop` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 15:03:50
+-- Dump completed on 2021-01-12 16:19:43

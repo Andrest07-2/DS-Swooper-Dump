@@ -27,11 +27,12 @@ DROP TABLE IF EXISTS `Storage`;
 CREATE TABLE `Storage` (
   `storage_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `storage_address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `storage_manager` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `storage_manager` int(11) NOT NULL,
   `storage_telephone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `storage_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`storage_id`),
   KEY `idx_fk_storage_manager` (`storage_manager`),
+  CONSTRAINT `Storage_ibfk_1` FOREIGN KEY (`storage_manager`) REFERENCES `Employee` (`employee_id`),
   CONSTRAINT `fk_storage_manager` FOREIGN KEY (`storage_manager`) REFERENCES `Employee` (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,7 +43,7 @@ CREATE TABLE `Storage` (
 
 LOCK TABLES `Storage` WRITE;
 /*!40000 ALTER TABLE `Storage` DISABLE KEYS */;
-INSERT INTO `Storage` VALUES ('ST001','Japan','3','041134758738','JapanBranch@Storage.com'),('ST002','Korea','3','041145934595','KoreaBranch@Storage.com');
+INSERT INTO `Storage` VALUES ('ST001','Japan',3,'041134758738','JapanBranch@Storage.com'),('ST002','Korea',3,'041145934595','KoreaBranch@Storage.com');
 /*!40000 ALTER TABLE `Storage` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 15:04:12
+-- Dump completed on 2021-01-12 16:20:05
