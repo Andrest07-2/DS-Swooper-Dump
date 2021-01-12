@@ -38,7 +38,7 @@ CREATE TABLE `Items` (
 
 LOCK TABLES `Items` WRITE;
 /*!40000 ALTER TABLE `Items` DISABLE KEYS */;
-INSERT INTO `Items` VALUES (1,'Mantap',50000),(2,'Tooth brush',10000),(3,'Pencil',8000),(4,'Pen',9000),(5,'Eraser',4000),(6,'Iphone 10',5000),(7,'Huawei Mate 20',50),(10,'Sony headphone',50),(15,'Book',200),(16,'bracelet',120000),(38,'Headband',20);
+INSERT INTO `Items` VALUES (1,'Mantap',50000),(2,'Tooth brush',12000),(3,'Pencil',8000),(4,'Pen',9000),(5,'Eraser',4000),(6,'Iphone 10',5000),(7,'Huawei Mate 20',50),(10,'Sony headphone',50),(15,'Book',200),(16,'bracelet',120000),(38,'Headband',20);
 /*!40000 ALTER TABLE `Items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:20:35
+-- Dump completed on 2021-01-12 12:49:10

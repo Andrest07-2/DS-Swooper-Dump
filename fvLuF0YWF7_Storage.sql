@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `Storage`;
 CREATE TABLE `Storage` (
   `storage_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `storage_address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `storage_manager` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `storage_manager` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `storage_telephone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `storage_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`storage_id`),
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:20:43
+-- Dump completed on 2021-01-12 12:49:14

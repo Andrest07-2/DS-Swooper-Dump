@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `Shop Stock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Shop Stock` (
   `shop_stock_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_id` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `item_id` int(11) DEFAULT NULL,
+  `shop_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `item_id` int(11) NOT NULL,
   `shop_stock_quantity` int(10) unsigned NOT NULL,
   PRIMARY KEY (`shop_stock_id`),
   KEY `idx_fk_shop_id` (`shop_id`),
@@ -43,7 +43,7 @@ CREATE TABLE `Shop Stock` (
 
 LOCK TABLES `Shop Stock` WRITE;
 /*!40000 ALTER TABLE `Shop Stock` DISABLE KEYS */;
-INSERT INTO `Shop Stock` VALUES (3,'SH002',1,76),(4,'SH002',4,29),(5,'SH001',5,1),(12,'SH001',2,1),(14,'SH001',10,3),(15,'SH001',6,2),(16,'SH002',6,2),(17,'SH001',3,10),(20,'SH002',7,5);
+INSERT INTO `Shop Stock` VALUES (3,'SH002',1,76),(4,'SH002',4,27),(5,'SH001',5,1),(12,'SH001',2,1),(14,'SH001',10,2),(15,'SH001',6,2),(16,'SH002',6,2),(17,'SH001',3,14),(20,'SH002',7,5);
 /*!40000 ALTER TABLE `Shop Stock` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:20:21
+-- Dump completed on 2021-01-12 12:49:01

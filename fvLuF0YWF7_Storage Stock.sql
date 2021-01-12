@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `Storage Stock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Storage Stock` (
   `storage_stock_id` int(11) NOT NULL AUTO_INCREMENT,
-  `storage_id` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `item_id` int(11) DEFAULT NULL,
+  `storage_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `item_id` int(11) NOT NULL,
   `storage_stock_quantity` int(10) unsigned NOT NULL,
   PRIMARY KEY (`storage_stock_id`),
   KEY `idx_fk_storage_id` (`storage_id`),
@@ -43,7 +43,7 @@ CREATE TABLE `Storage Stock` (
 
 LOCK TABLES `Storage Stock` WRITE;
 /*!40000 ALTER TABLE `Storage Stock` DISABLE KEYS */;
-INSERT INTO `Storage Stock` VALUES (1,'ST001',2,28),(2,'ST002',2,100),(3,'ST001',3,81),(4,'ST001',4,55),(8,'ST001',6,108),(9,'ST002',7,95),(10,'ST001',10,100),(28,'ST001',5,9),(30,'ST001',38,100),(31,'ST001',16,50),(32,'ST001',1,1);
+INSERT INTO `Storage Stock` VALUES (1,'ST001',2,28),(2,'ST002',2,100),(3,'ST001',3,77),(4,'ST001',4,55),(8,'ST001',6,118),(9,'ST002',7,95),(10,'ST001',10,100),(28,'ST001',5,9),(30,'ST001',38,100),(31,'ST001',16,50),(32,'ST001',1,1);
 /*!40000 ALTER TABLE `Storage Stock` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:21:05
+-- Dump completed on 2021-01-12 12:49:27

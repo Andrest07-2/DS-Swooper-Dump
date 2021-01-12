@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `Users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Users` (
   `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `password` blob,
+  `password` blob NOT NULL,
   `employee_id` int(11) NOT NULL,
   PRIMARY KEY (`username`),
   KEY `idx_fk_employee_id` (`employee_id`),
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:20:28
+-- Dump completed on 2021-01-12 12:49:06

@@ -27,12 +27,11 @@ DROP TABLE IF EXISTS `Shop`;
 CREATE TABLE `Shop` (
   `shop_id` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `shop_address` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `shop_manager` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `shop_manager` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `shop_telephone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `shop_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`shop_id`),
-  KEY `idx_fk_shop_manager` (`shop_manager`),
-  CONSTRAINT `fk_shop_manager` FOREIGN KEY (`shop_manager`) REFERENCES `Employee` (`employee_id`)
+  KEY `idx_fk_shop_manager` (`shop_manager`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 23:20:05
+-- Dump completed on 2021-01-12 12:48:53
