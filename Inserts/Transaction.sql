@@ -1,0 +1,2 @@
+insert into Transaction (transaction_date, item_id, transaction_item_quantity, `transaction_buy/sell`, transaction_price, transactor_id)
+values ("Transaction Date", "Item ID", "Quantity", "Buy/Sell", "Price", "Transactor ID");
