@@ -41,7 +41,7 @@ CREATE TABLE `Shop` (
 
 LOCK TABLES `Shop` WRITE;
 /*!40000 ALTER TABLE `Shop` DISABLE KEYS */;
-INSERT INTO `Shop` VALUES ('SH001','Narnia','2','04112130887','NarniaBranch@shop.com'),('SH002','Antartica','3','04110875343','AntarticaBranch@shop.com');
+INSERT INTO `Shop` VALUES ('SH001','Narnia','1','04112130887','NarniaBranch@shop.com'),('SH002','Antartica','2','04110875343','AntarticaBranch@shop.com');
 /*!40000 ALTER TABLE `Shop` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 12:48:53
+-- Dump completed on 2021-01-12 15:03:50

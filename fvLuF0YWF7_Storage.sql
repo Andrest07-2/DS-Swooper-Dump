@@ -42,7 +42,7 @@ CREATE TABLE `Storage` (
 
 LOCK TABLES `Storage` WRITE;
 /*!40000 ALTER TABLE `Storage` DISABLE KEYS */;
-INSERT INTO `Storage` VALUES ('ST001','Japan','4','041134758738','JapanBranch@Storage.com'),('ST002','Korea','4','041145934595','KoreaBranch@Storage.com');
+INSERT INTO `Storage` VALUES ('ST001','Japan','3','041134758738','JapanBranch@Storage.com'),('ST002','Korea','3','041145934595','KoreaBranch@Storage.com');
 /*!40000 ALTER TABLE `Storage` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 12:49:14
+-- Dump completed on 2021-01-12 15:04:12

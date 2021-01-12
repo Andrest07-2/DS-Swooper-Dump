@@ -18,31 +18,8 @@ USE `fvLuF0YWF7`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Users`
+-- Dumping routines for database 'fvLuF0YWF7'
 --
-
-DROP TABLE IF EXISTS `Users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Users` (
-  `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `password` blob NOT NULL,
-  `employee_id` int(11) NOT NULL,
-  PRIMARY KEY (`username`),
-  KEY `idx_fk_employee_id` (`employee_id`),
-  CONSTRAINT `fk_employee_id` FOREIGN KEY (`employee_id`) REFERENCES `Employee` (`employee_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Users`
---
-
-LOCK TABLES `Users` WRITE;
-/*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES ('Admin',_binary '\"qÚª…†ïk4\'VÊîµò',3),('Cashier1',_binary 'Ûï\Œj>Åf@vÇ\‡^',1),('Cashier2',_binary '\ZU	JUÒ	h-\“Jx&_',2);
-/*!40000 ALTER TABLE `Users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -53,4 +30,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 15:04:03
+-- Dump completed on 2021-01-12 15:04:35
